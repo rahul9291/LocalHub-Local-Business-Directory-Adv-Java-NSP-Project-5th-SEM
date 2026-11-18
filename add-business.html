@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalHub | Add Your Business</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #172c52;
+}
+
+nav {
+    background: white;
+    padding: 19px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 20px #17243b0c;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #172c52;
+    text-decoration: none;
+}
+
+.logo span { color: #f28b35; }
+
+nav a.back {
+    text-decoration: none;
+    color: #536078;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+nav a.back:hover { color: #f28b35; }
+
+.hero {
+    background: linear-gradient(115deg,#172c52,#315a89);
+    padding: 48px 8%;
+    color: white;
+}
+
+.hero small {
+    color: #ffb36d;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.hero p {
+    color: #d2deed;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.main {
+    max-width: 950px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.form-card {
+    background: white;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 10px 35px #17243b0c;
+    animation: appear .7s ease;
+}
+
+.form-heading {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.form-heading h2 {
+    font-size: 23px;
+    margin-bottom: 9px;
+}
+
+.form-heading p {
+    color: #8994a6;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.form-group { margin-bottom: 21px; }
+
+.full { grid-column: 1/-1; }
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #34435c;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box i {
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    color: #9aa5b5;
+    pointer-events: none;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px 15px 15px 43px;
+    border: 1px solid #e0e5ed;
+    border-radius: 9px;
+    outline: none;
+    background: #fff;
+    color: #34435c;
+    font-size: 13px;
+    transition: .3s;
+}
+
+textarea {
+    padding: 15px;
+    min-height: 125px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #f28b35;
+    box-shadow: 0 0 0 4px #f28b3518;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #a5adba;
+}
+
+.info-box {
+    background: #fff7ee;
+    border: 1px solid #ffe4cb;
+    padding: 17px;
+    border-radius: 10px;
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    margin: 5px 0 25px;
+}
+
+.info-box i {
+    color: #ed8a36;
+    font-size: 19px;
+    margin-top: 2px;
+}
+
+.info-box p {
+    color: #8a694e;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    background: #f28b35;
+    color: white;
+    padding: 16px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: #dc7020;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px #f28b3540;
+}
+
+.bottom-link {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.bottom-link a {
+    color: #e77e2a;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.bottom-link a:hover { text-decoration: underline; }
+
+footer {
+    background: #101e38;
+    color: white;
+    text-align: center;
+    padding: 27px;
+    font-size: 12px;
+}
+
+footer p {
+    color: #bdc9da;
+    margin-top: 8px;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:650px) {
+    nav { padding: 17px 5%; }
+    .hero { padding: 40px 6%; }
+    .hero h1 { font-size: 27px; }
+    .main { margin: 25px auto; padding: 0 12px; }
+    .form-card { padding: 25px 19px; }
+    .form-grid { grid-template-columns: 1fr; gap: 0; }
+    .full { grid-column: auto; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html" class="logo">Local<span>Hub.</span></a>
+    <a href="owner" class="back">
+        <i class="fas fa-arrow-left"></i> Dashboard
+    </a>
+</nav>
+
+<header class="hero">
+    <small>GROW YOUR BUSINESS WITH LOCALHUB</small>
+    <h1>List Your Business With Us 🏪</h1>
+    <p>Reach more customers, increase your visibility and connect with your local community.</p>
+</header>
+
+<main class="main">
+
+<div class="form-card">
+
+    <div class="form-heading">
+        <h2><i class="fas fa-store" style="color:#f28b35"></i> Business Information</h2>
+        <p>Enter your business details carefully to submit your listing for approval.</p>
+    </div>
+
+    <form action="addBusiness" method="post">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Business Name *</label>
+                <div class="input-box">
+                    <i class="fas fa-building"></i>
+                    <input type="text" name="businessName"
+                           placeholder="Enter business name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Business Category *</label>
+                <div class="input-box">
+                    <i class="fas fa-layer-group"></i>
+                    <select name="categoryId" required>
+                        <option value="">Select Category</option>
+                        <option value="1">Restaurant</option>
+                        <option value="2">Education</option>
+                        <option value="3">Healthcare</option>
+                        <option value="4">Shopping</option>
+                        <option value="5">Technology</option>
+                        <option value="6">Beauty</option>
+                        <option value="7">Automobile</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group full">
+                <label>Business Address *</label>
+                <div class="input-box">
+                    <i class="fas fa-location-dot"></i>
+                    <input type="text" name="address"
+                           placeholder="Enter complete business address" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number *</label>
+                <div class="input-box">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="phone"
+                           placeholder="Enter phone number" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Business Email *</label>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email"
+                           placeholder="Enter business email" required>
+                </div>
+            </div>
+
+            <div class="form-group full">
+                <label>Business Description *</label>
+                <textarea name="description"
+                          placeholder="Describe your business, products and services..."
+                          required></textarea>
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <i class="fas fa-circle-info"></i>
+            <p>
+                Your business listing will be submitted for admin approval.
+                Once approved, it will become visible on the Browse Businesses page.
+            </p>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Submit Business for Approval
+            <i class="fas fa-arrow-right"></i>
+        </button>
+
+    </form>
+
+    <div class="bottom-link">
+        <a href="my-businesses">
+            <i class="fas fa-store"></i> View My Businesses
+        </a>
+    </div>
+
+</div>
+</main>
+
+<footer>
+    <div class="logo" style="color:white">Local<span>Hub.</span></div>
+    <p>Connecting people with local businesses.</p>
+    <p style="margin-top:12px">© 2026 LocalHub. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

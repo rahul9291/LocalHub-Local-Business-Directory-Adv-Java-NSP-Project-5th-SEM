@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalHub | Create Account</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f3f6fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 65px rgba(20,40,75,.13);
+    animation: appear .8s ease;
+}
+
+.left-panel {
+    background:
+    linear-gradient(140deg, #10213fee, #1d416ce8),
+    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1000')
+    center/cover;
+    color: white;
+    padding: 50px 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span { color: #ffa75c; }
+
+.welcome h1 {
+    font-size: 39px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.welcome h1 span { color: #ffad67; }
+
+.welcome p {
+    color: #d2dced;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 24px;
+    color: #e1e9f5;
+    font-size: 13px;
+}
+
+.benefit i {
+    color: #ffad67;
+    font-size: 18px;
+}
+
+.left-footer {
+    color: #c0cce0;
+    font-size: 12px;
+}
+
+.right-panel {
+    padding: 45px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    background: #fff0e3;
+    color: #ef8734;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 19px;
+}
+
+.right-panel h2 {
+    color: #172c52;
+    font-size: 28px;
+    margin-bottom: 9px;
+}
+
+.subtitle {
+    color: #8994a6;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #34435c;
+    margin-bottom: 7px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 13px 42px;
+    border: 1px solid #e0e5ed;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13px;
+    background: white;
+    transition: .3s;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #f28b35;
+    box-shadow: 0 0 0 4px #f28b3518;
+}
+
+.input-box .field-icon {
+    position: absolute;
+    left: 14px;
+    top: 15px;
+    color: #99a3b4;
+    pointer-events: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    color: #8994a6;
+    cursor: pointer;
+}
+
+.register-btn {
+    width: 100%;
+    border: none;
+    background: #f28b35;
+    color: white;
+    padding: 15px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 5px;
+}
+
+.register-btn:hover {
+    background: #dd7522;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px #f28b3540;
+}
+
+.links {
+    text-align: center;
+    margin-top: 19px;
+    font-size: 12px;
+    color: #8994a6;
+    line-height: 2.3;
+}
+
+.links a {
+    color: #e77e2a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.links a:hover { text-decoration: underline; }
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:750px) {
+    .wrapper { grid-template-columns: 1fr; }
+    .left-panel { min-height: 280px; padding: 32px; }
+    .welcome h1 { font-size: 31px; }
+    .right-panel { padding: 35px 28px; }
+}
+
+@media(max-width:400px) {
+    .right-panel { padding: 30px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="left-panel">
+        <div class="logo">Local<span>Hub.</span></div>
+
+        <div class="welcome">
+            <h1>Join Our <span>Community.</span></h1>
+            <p>
+                Create your account and become a part of
+                a growing community of local customers and businesses.
+            </p>
+
+            <div class="benefit">
+                <i class="fas fa-store"></i>
+                Discover amazing local businesses
+            </div>
+
+            <div class="benefit">
+                <i class="fas fa-user-plus"></i>
+                Create your personal account
+            </div>
+
+            <div class="benefit">
+                <i class="fas fa-briefcase"></i>
+                Grow your local business
+            </div>
+        </div>
+
+        <div class="left-footer">
+            © 2026 LocalHub. All rights reserved.
+        </div>
+    </div>
+
+    <div class="right-panel">
+
+        <div class="icon-box">
+            <i class="fas fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p class="subtitle">Fill in your details to get started.</p>
+
+        <form action="register" method="post">
+
+            <label>Full Name</label>
+            <div class="input-box">
+                <i class="fas fa-user field-icon"></i>
+                <input type="text" name="name"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <label>Email Address</label>
+            <div class="input-box">
+                <i class="fas fa-envelope field-icon"></i>
+                <input type="email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <label>Password</label>
+            <div class="input-box">
+                <i class="fas fa-lock field-icon"></i>
+                <input type="password" name="password"
+                       id="password"
+                       placeholder="Create a password" required>
+                <i class="fas fa-eye toggle-password"
+                   id="togglePassword" onclick="togglePass()"></i>
+            </div>
+
+            <label>Phone Number</label>
+            <div class="input-box">
+                <i class="fas fa-phone field-icon"></i>
+                <input type="tel" name="phone"
+                       placeholder="Enter your phone number">
+            </div>
+
+            <label>Account Type</label>
+            <div class="input-box">
+                <i class="fas fa-user-tag field-icon"></i>
+                <select name="role" required>
+                    <option value="">Select Account Type</option>
+                    <option value="USER">Customer / User</option>
+                    <option value="OWNER">Business Owner</option>
+                </select>
+            </div>
+
+            <button type="submit" class="register-btn">
+                Create My Account <i class="fas fa-arrow-right"></i>
+            </button>
+
+        </form>
+
+        <div class="links">
+            Already have an account?
+            <a href="login.html">Login Here</a>
+            <br>
+            <a href="index.html">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function togglePass() {
+    const password = document.getElementById("password");
+    const icon = document.getElementById("togglePassword");
+
+    if (password.type === "password") {
+        password.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+        password.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+    }
+}
+</script>
+
+</body>
+</html>

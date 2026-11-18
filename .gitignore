@@ -1,0 +1,21 @@
+
+# Java compiled files
+*.class
+
+# Logs
+*.log
+
+# Local secrets
+.env
+config.properties
+db.properties
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Temporary files
+temp/
+work/
+web.xml.bak
